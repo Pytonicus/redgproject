@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Sistema, Fabricante
 
-# Register your models here.
+admin.site.register(Fabricante)
+admin.site.register(Sistema)
