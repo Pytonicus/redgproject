@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Maquina, Emulador, Prueba, Marca, Placa
+from .models import Maquina, Emulador, Prueba, Marca, Placa, SO
 # se importa el formateador html:
 from django.utils.html import format_html
     
@@ -38,8 +38,15 @@ class PlacaAdmin(admin.ModelAdmin):
     def imagen(self, obj):
         return format_html("<img src={} height='75' />", obj.foto.url)
 
+class SOAdmin(admin.ModelAdmin):
+    list_display = ('nombre', 'version', 'logotipo')
+
+    def logotipo(self, obj):
+        return format_html("<img src={} height='75' />", obj.logo.url)
+
 admin.site.register(Maquina, MaquinaAdmin)
 admin.site.register(Emulador, EmuladorAdmin)
 admin.site.register(Prueba, PruebaAdmin)
 admin.site.register(Marca, MarcaAdmin)
 admin.site.register(Placa, PlacaAdmin)
+admin.site.register(SO, SOAdmin)
