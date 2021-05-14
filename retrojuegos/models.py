@@ -40,7 +40,7 @@ class Sistema(models.Model):
     logo = models.ImageField(upload_to='retrogames/logos', verbose_name="Logo", blank=True)
     consola = models.ImageField(upload_to='retrogames/consolas', verbose_name="Consola", blank=True)
     icono = models.ImageField(upload_to='retrogames/iconos', verbose_name="Icono", blank=True)
-
+    descarga = models.URLField(verbose_name="Link de descarga", blank=True)
 
     fecha_creacion = models.DateTimeField(auto_now_add = True, verbose_name="Creado el")
     fecha_edicion = models.DateField(auto_now = True, verbose_name="Editado el")

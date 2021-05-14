@@ -78,12 +78,32 @@ class Emulador(models.Model):
         return self.nombre
 
 
+class SO(models.Model):
+    """ Modelo de sistemas operativos """
+
+    nombre = models.CharField(max_length=200, verbose_name="Sistema")
+    version = models.CharField(max_length=100, verbose_name="Versión", blank=True)
+    logo = models.ImageField(upload_to="pruebas/so", verbose_name="Logotipo", blank=True)
+    descarga = models.URLField(verbose_name="Link de descarga", blank=True)
+
+    fecha_creacion = models.DateTimeField(auto_now_add = True, verbose_name="Creado el")
+    fecha_edicion = models.DateField(auto_now = True, verbose_name="Editado el")
+
+    class Meta:
+        verbose_name="Sistema Operativo"
+        verbose_name_plural="Sistemas operativos"
+        ordering=["nombre"]
+
+    def __str__(self):
+        return self.nombre
+
 class Prueba(models.Model):
     """ Pruebas realizadas a máquinas con distintos emuladores """
 
     titulo = models.ForeignKey(Videojuego, on_delete=models.CASCADE, verbose_name="Juego")
     maquina = models.ForeignKey(Maquina, on_delete=models.CASCADE, verbose_name="Máquina")
     placa = models.ForeignKey(Placa, on_delete=models.CASCADE, verbose_name="Placa SBC")
+    so = models.ForeignKey(SO, on_delete=models.CASCADE, verbose_name="Sistema operativo", blank=True, null=True)
     emulador = models.ForeignKey(Emulador, on_delete=models.CASCADE, verbose_name="Emulador")
     preferente = models.BooleanField(verbose_name="Preferente")
     observaciones = models.CharField(max_length=200, verbose_name="Observaciones")
