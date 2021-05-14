@@ -40,7 +40,6 @@ class Sistema(models.Model):
     logo = models.ImageField(upload_to='retrogames/logos', verbose_name="Logo", blank=True)
     consola = models.ImageField(upload_to='retrogames/consolas', verbose_name="Consola", blank=True)
     icono = models.ImageField(upload_to='retrogames/iconos', verbose_name="Icono", blank=True)
-    descarga = models.URLField(verbose_name="Link de descarga", blank=True)
 
     fecha_creacion = models.DateTimeField(auto_now_add = True, verbose_name="Creado el")
     fecha_edicion = models.DateField(auto_now = True, verbose_name="Editado el")
@@ -72,7 +71,8 @@ class Videojuego(models.Model):
     caja = models.ImageField(upload_to='retrogames/portadas', verbose_name="Portada", blank=True)
     video = models.FileField(upload_to='retrogames/videosnaps', verbose_name="Video preview", blank=True)
     descripcion = models.TextField(verbose_name="Descripción", blank=True)
-
+    descarga = models.URLField(verbose_name="Link de descarga", blank=True, null=True)
+    
     class Meta:
         verbose_name="Videojuego retro"
         verbose_name_plural="Videojuegos retro"
