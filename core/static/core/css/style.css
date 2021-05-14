@@ -1,0 +1,763 @@
+/* PALETA DE COLORES:
+
+FONDO 1: #C51D4A
+FONDO 2: #901C3A
+MENUS Y FOOTER: #0A100D
+CONTENIDO: #F5EFED
+SOMBREADO: #818D92
+ALTERNATIVO: #531253
+
+FUENTES:
+font-family: 'Roboto', sans-serif;
+font-family: 'Luckiest Guy', cursive;
+
+
+*/
+
+/* ESTILOS GLOBALES */
+
+body{
+    background: linear-gradient(90deg, #901C3A 30%, #C51D4A 100%);
+    font-family: 'Roboto', sans-serif;
+    animation: colores 5s infinite alternate;
+}
+
+/* PRELOADER */
+.preloader{
+    position: fixed;
+    margin-top: -60px;
+    width: 100%;
+    height: 100%;
+    background: #901C3A;
+    z-index: 100;
+}
+
+    .preloader span{
+        display: block;
+        margin: 0 auto;
+        bottom: 0;
+        width: 150px;
+        height: 150px;
+        border: 15px solid #F5EFED;
+        border-top: 15px solid #0A100D;
+        border-radius: 50% 50%;
+        animation: girar 1s infinite;
+    }
+
+    @keyframes girar {
+        from{
+            transform: rotate(0deg);
+        }to{
+            transform: rotate(360deg);
+        }
+    }
+
+/* CABECERA */
+
+header {
+    min-height: 100px;
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 45px;
+    color: #0A100D;
+    text-shadow: 0px 0px 3px #0A100D;
+}
+
+/* NAV */
+
+.nav-computer{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background: #0A100D;
+    width: 1010px;
+    color: #F5EFED;
+    box-shadow: 0px 0px 10px #0A100D;
+    z-index: 1;
+}
+
+    .nav-computer a{
+        font-family: 'Luckiest Guy', cursive;
+        font-size: 30px;
+        text-decoration: none;
+        color: #F5EFED;
+        padding: 0 15px;
+    }
+
+        .nav-computer a:hover, .selected{
+            font-size: 35px;
+            color: #C51D4A !important;
+            transition: 0.5s;
+        }
+
+.selected{
+    cursor: default;
+}
+
+/* CUERPO */
+
+article {
+    position: relative;
+    margin: 0 auto;
+    min-height: 500px;
+    background: #F5EFED;
+    width: 1024px;
+    color: #0A100D;
+    box-shadow: 0px 0px 25px #0A100D;
+    z-index: 2;
+}
+
+    article h2{
+        display: flex;
+        font-family: 'Luckiest Guy',cursive;
+        margin: 0;
+        padding: 8px 20px;
+        padding-top: 13px;
+        background: #0a100d;
+        color: #f5efed;
+        width: 90%;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        font-size: 22px;
+        font-weight: lighter;
+    }
+
+/* PIE */
+
+footer {
+    margin: 0 auto;
+    width: 1024px;
+    background: #0A100D;
+    color: #F5EFED;
+    box-shadow: 0px 8px 25px #0A100D;
+    z-index: 1;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+    footer section{
+        width: 100%;
+        padding-bottom: 25px;
+    }
+
+        footer section h3 {
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 24px;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+.footer-nav {
+    font-family: 'Luckiest Guy', cursive;
+    text-decoration: none;
+    color: #F5EFED;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30%;
+}
+
+    .socialLinks{
+        padding-left: 22%;
+    }
+
+    .footer-selected, .footer-nav a:hover{
+        color: #C51D4A !important;
+        font-size: 22px;
+        transition: 0.5s;
+    }
+
+.footer-selected{
+    cursor: default;
+}
+
+    .footer-nav a{
+        text-decoration: none;
+        font-size: 20px;
+        padding: 10px 0px;
+        color: #F5EFED;
+    }
+
+.redes a i{
+    font-size: 34px;
+    padding: 0px 10px;
+}
+
+.foto{
+    display: flex;
+    justify-content:center;
+}
+
+    .foto img{
+        width: 100px;
+        border-radius: 50% 50%;
+        -webkit-border-radius: 50% 50%;
+        text-align: center;
+        border: 5px solid #901C3A;
+        box-shadow: 0px 0px 20px #901C3A;
+    }
+
+#sobre p{
+    padding: 0px 35px;
+    font-size: 16px;
+    text-align: left;
+}
+
+#sobre a{
+    font-family: 'Luckiest Guy', cursive;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #F5EFED;
+    font-weight: bold;
+}
+
+    #sobre a:hover{
+        color: #C51D4A;
+        font-size: 18px;
+        transition: 0.5s;
+    }
+
+#licencia{
+    text-align: center;
+}
+
+    #licencia small{
+        color: #0A100D;
+        text-align: center;
+    }
+/* BLOG */
+
+.entrada {
+    margin: 0 auto;
+    width: 90%;
+}
+
+    .entrada h3{
+        color: #F5EFED;
+        background: #0A100D;
+        padding: 5px 0;
+        padding-left: 18px;
+        margin: 0px;
+        width: 95%;
+    }
+
+.row{
+    border: 2px solid #0A100D;
+    box-shadow: 0px 0px 6px #818D92;
+    display: flex;
+    flex-direction: row;
+}
+
+.column-s, .column-l{
+    display: flex;
+    flex-direction: column;
+}
+
+.column-s{
+    padding: 10px;
+}
+
+    .column-s .imagen{
+        overflow: hidden;
+        width: 200px;
+        height: 200px;
+        border-radius: 10% 10%;
+        background: #901C3A;
+        box-shadow: 0px 0px 6px #0A100D;
+        z-index: 20!important;
+    }
+
+        .column-s .imagen img{
+            max-width: 200px;
+            min-height: 200px;
+            z-index: 10;
+        }
+
+    .column-s .no-imagen{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        z-index: 10;
+        background: #901C3A;
+        font-family: 'Luckiest Guy', cursive;
+    }
+
+        .column-s .no-imagen p{
+            padding-top: 45px;
+            padding-left: 30px;
+            font-size: 200px;
+            transform: rotate(-40deg);
+        }
+
+.categoria{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 18px;
+    text-align: center;
+}
+
+small{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.column-l{
+    padding: 0 20px;
+}
+
+.separator{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.boton{
+    margin-top: 0px;
+    text-align: right;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+    .boton a{
+        font-family: 'Luckiest Guy', cursive;
+        background-color: #901C3A;
+        padding: 15px 15px 12px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: #F5EFED;
+    }
+
+        .boton a:hover{
+            color: #C51D4A;
+            background: #0A100D;
+            box-shadow: 0px 0px 10px #901C3A;
+            transition: 0.5s;
+        }
+
+    .boton:hover{
+        transform: scale(1.05, 1.05);
+        transition: 0.5s;
+    }
+
+.paginator{
+    display: flex;
+    justify-content: center;
+    color: #F5EFED;
+}
+
+    .paginator .paginate{
+        background: #0A100D;
+        margin: 0 5px;
+        padding: 10px;
+    }
+
+        .paginate a{
+            text-decoration: none;
+            font-weight: bolder;
+            color: #F5EFED;
+        }
+
+            .paginate a:hover{
+                color: #901C3A;
+                transition: 0.2s;
+            }
+
+/* Tutoriales */
+.tutoriales{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tarjeta-tutorial{
+    border: 1px solid #0A100D;
+    box-shadow: 0px 0px 6px #818D92;
+    margin: 20px;
+    width: 290px;
+    border-radius: 3px;
+    text-align: center;
+    position: relative; /* Para que el botón se encaje al final el contenedor va relativo */
+    min-height: 350px;
+}
+
+    .tarjeta-tutorial h3 {
+        font-size: 16px;
+    }
+    .tarjeta-tutorial p {
+        font-size: 15px;
+        padding: 0px 5px;
+    }
+
+.imagen-tutorial{
+    width: 270px;
+    height: 160px;
+    overflow: hidden;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+    .imagen-tutorial img{
+        width: 100%;
+    }
+
+.tarjeta-tutorial .boton{
+    text-align: center;
+    /* Y el botón tiene que ir absoluto con las posiciones a 0 */
+    position: absolute; 
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+/* Tutorial */
+.titulo-articulo{
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+}
+
+.video{
+    display:flex;
+    justify-content: center;
+}
+    iframe{
+        width: 760px;
+        height: 515px;
+        border-radius: 2px;
+        box-shadow: 0px 0px 6px #818D92;
+    }
+
+.transcripcion{
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.apartado-descarga{
+    display:flex;
+    justify-content: flex-end;
+    margin-right: 35px;
+}
+
+    .descarga{
+
+        background-color: #C51D4A;
+        color: #F5EFED;
+        border: 1px solid #0A100D;
+        box-shadow: 0px 0px 6px #818D92;
+        text-align: center;
+        width: 200px;
+    }
+
+        .descarga .boton{
+            text-align:center;
+        }
+
+/* PROYECTOS  */
+.row_column{
+    border: 0;
+    box-shadow: none;
+}
+    .listado{
+        width: 36%;
+        border-right: 2px solid #0A100D;
+        box-shadow: 2px 0px 3px #818D92;
+        background: rgba(255,255,190,0.5);
+    }
+
+        .listado ul{
+            list-style-type: decimal;
+            padding-left: 22px;
+            padding-right: 5px;
+        }
+
+            .listado h3, .listado ul li a{
+                padding-left: 10px;
+                text-decoration: none;
+                font-weight: bold;
+                color: #0A100D;
+            }
+                .listado ul li a{
+                        font-size: 14px;
+                        padding: 3px 0px;
+                        transition: 0.5s;
+                }
+                .listado ul li a:hover{
+                    color: #C51D4A;
+                    transition: 0.5s;
+                }
+                .listado ul li a:visited{
+                    color: #C51D4A;
+                }
+
+    .proyectos{
+        width: 100%;
+    }
+    
+    .video-proyecto iframe{
+        width: 654px;
+        height: 367px;
+        margin: 0px 60px;
+    }
+
+/* Cursos */
+.imagen-curso{
+    text-align: center;
+    
+}
+    .imagen-curso img {
+        width: 50%;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px;
+    }
+
+.boton-curso{
+    text-align: center;
+}
+
+/* TABLET */
+@media screen and (max-width: 1024px){
+    .nav-computer, article, footer{
+        width: 100%;
+    }
+
+    .nav-computer a{
+        font-size: 24px;
+    }
+
+    iframe{
+        width: 560px;
+        height: 315px;
+    }
+
+    .video-proyecto iframe{
+        width: 504px;
+        height: 317px;
+        margin: 0px 20px;
+    }
+}
+
+/* MOBILE */
+@media screen and (min-width: 640px){
+    .mobile-nav{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 640px){
+    header{
+        display: none;
+    }
+
+    .nav-computer{
+        display: none;
+    }
+
+    .mobile-nav, article, footer{
+        width: 100%;
+        margin-left: -8px;
+        padding-right: 16px;
+    }
+
+    h2{
+        font-family: 'Luckiest Guy', cursive!important;
+        text-align: center;
+    }
+
+    .mobile-nav {
+        position: fixed;
+        margin: -8px;
+        z-index: 5;
+        background: #0A100D;
+        color: #F5EFED;
+        height: 50px;
+    }
+
+    .mobile-menu{
+        position: fixed;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        height: 100%;
+        width: 60%;
+        background: #F5EFED;
+        transform: translateX(-260px);
+        animation: launchMenu 0.5s;
+    }
+
+    @keyframes launchMenu {
+        from{
+            transform: translateX(-260px);
+            box-shadow: 0px 0px 0px RGBA(0,0,0,0.0);
+        }to{
+            transform: translateX(0px);
+            box-shadow: 46px 0px 30px RGBA(0,0,0,0.5);
+        }
+    }
+
+    .mobile-menu-show{
+        transform: translateX(0px);
+        box-shadow: 46px 0px 30px RGBA(0,0,0,0.5);
+    }
+
+    .mobile-menu-close{
+        display: none;
+        transition: 1s;
+    }
+
+    .menu-close{
+        display: none;
+    }
+
+    .button-menu{
+        position: fixed;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: -1px;
+        background: #901C3A;
+        font-weight: bolder;
+        cursor: pointer;
+    }
+
+    .button-menu:hover{
+        color: #C51D4A;
+    }
+
+    .mobile-menu a{
+        padding: 12px 0;
+        font-family: 'Luckiest Guy', cursive;
+        text-decoration: none;
+        color: #0A100D;
+        font-size: 24px;
+    }
+
+    .selected{
+        font-size: 14px;
+        color: #C51D4A!important;
+    }
+
+    article, footer{
+        padding-top: 50px;
+    }
+
+    footer{
+        margin-bottom: 0px;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+
+    .footer-nav{
+        text-align: center;
+        padding-left: 0%;
+    }
+
+    footer section h3{
+        font-size: 34px;
+    }
+
+    .footer-nav a{
+        font-size: 34px;
+    }
+
+    #licencia{
+        text-align: center;
+        background: #0A100D;
+        border-radius: 0px 0px 130px 130px;
+    }
+
+    #licencia small{
+        margin: 0 auto;
+        color: #F5EFED;
+        text-align: center;
+    }
+
+    #sobre p{
+        padding: 0px 20px; 
+    }
+
+    .entrada{
+        width: 98%;
+        justify-content: center;
+        padding-left: 3%;
+    }
+
+    .entrada h3{
+        font-size: 15px;
+        text-align: center;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        width: 95.7%;
+        box-shadow: 0px -2px 3px #0A100D;
+    }
+    
+    .row{
+        flex-direction: column;
+        border: 0;
+
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+
+    .column-s .imagen{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border-radius: 2% 2%;
+    }
+    
+    .column-s .imagen img{
+        min-height: 100%;
+    }
+
+    .column-l {
+        padding: 0 8px;
+    }
+
+    .column-l p {
+        margin-top: -5px!important;
+    }
+
+    .boton{
+        text-align: center;
+    }
+
+    /* Tutoriales */
+    .tarjeta-tutorial{
+        border: 0px;
+    }
+
+    iframe{
+        width: 360px;
+        height: 215px;
+    }
+
+    .apartado-descarga{
+        display:flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    /* PROYECTOS */
+    .listado{
+        width: 100%;
+    }
+
+    .video-proyecto{
+        padding-left: 5%;
+    }
+
+    .video-proyecto iframe{
+        width: 354px;
+        height: 167px;
+        margin: 0px 0px;
+    }
+
+}
