@@ -68,11 +68,12 @@ class Videojuego(models.Model):
     desarrollador = models.ForeignKey(Desarrollador, on_delete=models.CASCADE, verbose_name="Desarrollador", blank=True, null=True)
     jugadores = models.CharField(max_length=20, choices=JUGADORES, verbose_name="Nº de Jugadores", blank=True, null=True)
     valoracion = models.FloatField(verbose_name="Valoración", blank=True, null=True)
+    favorito = models.BooleanField(verbose_name="Juego favorito")
     caja = models.ImageField(upload_to='retrogames/portadas', verbose_name="Portada", blank=True)
     video = models.FileField(upload_to='retrogames/videosnaps', verbose_name="Video preview", blank=True)
     descripcion = models.TextField(verbose_name="Descripción", blank=True)
     descarga = models.URLField(verbose_name="Link de descarga", blank=True, null=True)
-    
+
     class Meta:
         verbose_name="Videojuego retro"
         verbose_name_plural="Videojuegos retro"
