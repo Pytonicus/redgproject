@@ -32,8 +32,11 @@ class VideojuegoAdmin(admin.ModelAdmin):
 
     # cargar imagenes en admin:
     def caratula(self, obj):
-        return format_html("<img src={} height='75' />", obj.caja.url)
-
+        if obj.caja.url is not None:
+            result = format_html("<img src={} height='75' />", obj.caja.url)
+        else:
+            result = obj.caja
+        return result
 admin.site.register(Fabricante, FabricanteAdmin)
 admin.site.register(Sistema, SistemaAdmin)
 admin.site.register(Videojuego, VideojuegoAdmin)
