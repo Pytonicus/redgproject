@@ -21,7 +21,7 @@ class EmuladorAdmin(admin.ModelAdmin):
         return format_html("<img src={} height='75' />", obj.logo.url)
 
 class PruebaAdmin(admin.ModelAdmin):
-    list_display = ('id', 'titulo', 'maquina', 'placa', 'emulador', 'observaciones')
+    list_display = ('id', 'titulo', 'maquina', 'placa', 'so', 'emulador', 'observaciones')
 
 
 class MarcaAdmin(admin.ModelAdmin):
