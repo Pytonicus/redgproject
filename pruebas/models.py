@@ -105,8 +105,9 @@ class Prueba(models.Model):
     placa = models.ForeignKey(Placa, on_delete=models.CASCADE, verbose_name="Placa SBC")
     so = models.ForeignKey(SO, on_delete=models.CASCADE, verbose_name="Sistema operativo", blank=True, null=True)
     emulador = models.ForeignKey(Emulador, on_delete=models.CASCADE, verbose_name="Emulador")
-    preferente = models.BooleanField(verbose_name="Preferente")
-    observaciones = models.CharField(max_length=200, verbose_name="Observaciones")
+    preferente = models.BooleanField(verbose_name="Mejor Emulador")
+    favorito = models.BooleanField(verbose_name="Juego favorito")
+    observaciones = models.CharField(max_length=200, verbose_name="Observaciones", blank=True)
 
     fecha_creacion = models.DateTimeField(auto_now_add = True, verbose_name="Creado el")
     fecha_edicion = models.DateField(auto_now = True, verbose_name="Editado el")
