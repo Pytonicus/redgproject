@@ -63,6 +63,7 @@ class Videojuego(models.Model):
     ]
 
     nombre = models.CharField(max_length=200, verbose_name="Título")
+    sistema = models.ForeignKey(Sistema, on_delete=models.CASCADE, verbose_name="Sistema")
     lanzamiento = models.DateField(verbose_name="Fecha de lanzamiento", blank=True, null=True)
     genero = models.ForeignKey(Genero, on_delete=models.CASCADE, verbose_name="Género", blank=True, null=True)
     desarrollador = models.ForeignKey(Desarrollador, on_delete=models.CASCADE, verbose_name="Desarrollador", blank=True, null=True)
