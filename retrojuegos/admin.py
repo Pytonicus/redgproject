@@ -26,7 +26,7 @@ class SistemaAdmin(admin.ModelAdmin):
         return format_html("<img src={} height='75' />", obj.icono.url)
 
 class VideojuegoAdmin(admin.ModelAdmin):
-    list_display = ('nombre', 'lanzamiento', 'genero', 'desarrollador', 'jugadores','valoracion', 'caratula')
+    list_display = ('nombre', 'sistema', 'lanzamiento', 'genero', 'desarrollador', 'jugadores','valoracion', 'caratula')
 
     list_filter = ('genero', 'desarrollador', 'jugadores', 'valoracion')
 
