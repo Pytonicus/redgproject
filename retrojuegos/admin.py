@@ -26,7 +26,7 @@ class SistemaAdmin(admin.ModelAdmin):
         return format_html("<img src={} height='75' />", obj.icono.url)
 
 class VideojuegoAdmin(admin.ModelAdmin):
-    list_display = ('nombre', 'sistema', 'lanzamiento', 'genero', 'desarrollador', 'jugadores','valoracion', 'caratula')
+    list_display = ('letras', 'sistema', 'lanzamiento', 'genero', 'desarrollador', 'jugadores','valoracion', 'caratula')
 
     list_filter = ('genero', 'desarrollador', 'jugadores', 'valoracion')
 
@@ -37,6 +37,14 @@ class VideojuegoAdmin(admin.ModelAdmin):
         except:
             result = obj.caja
         return result
+
+    def letras(self, obj):
+        try:
+            result = format_html("<img src={} height='75' />", obj.banner.url)
+        except:
+            result = obj.nombre 
+        return result
+
 admin.site.register(Fabricante, FabricanteAdmin)
 admin.site.register(Sistema, SistemaAdmin)
 admin.site.register(Videojuego, VideojuegoAdmin)

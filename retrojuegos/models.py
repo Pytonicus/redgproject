@@ -70,6 +70,7 @@ class Videojuego(models.Model):
     jugadores = models.CharField(max_length=20, choices=JUGADORES, verbose_name="Nº de Jugadores", blank=True, null=True)
     valoracion = models.FloatField(verbose_name="Valoración", blank=True, null=True)
     favorito = models.BooleanField(verbose_name="Juego favorito")
+    banner = models.ImageField(upload_to='retrogames/banners', verbose_name="Banner", blank=True, null=True)
     caja = models.ImageField(upload_to='retrogames/portadas', verbose_name="Portada", blank=True)
     video = models.FileField(upload_to='retrogames/videosnaps', verbose_name="Video preview", blank=True)
     descripcion = models.TextField(verbose_name="Descripción", blank=True)
